@@ -6,6 +6,16 @@ function Counter() {
   const [hidden, setHidden] = useState(false);
   const [openAccordion, setOpenAccordion] = useState(false);
 
+  const message = "Bruh";
+
+  function censorMessage(message: string) {
+    const newMessage = [];
+    for (let i = 0; i < message.length; i++) {
+      newMessage.push("•");
+    }
+    return newMessage.join("");
+  }
+
   function addIncrement() {
     setCount(count + 1);
   }
@@ -39,10 +49,8 @@ function Counter() {
         <hr />
         <h2>Toggle visibility</h2>
         <div className="visibility__toggle">
-          <p
-            className={!hidden ? `toggle__message` : `toggle__message__hidden`}
-          >
-            Bruh
+          <p className="toggle__message">
+            {!hidden ? message : censorMessage(message)}
           </p>
           <button className="hidden__button" onClick={onVisibilityChange}>
             {hidden ? <Eye /> : <EyeOff />}
