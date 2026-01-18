@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Eye } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 
 function Counter() {
   const [count, setCount] = useState(0);
+  const [hidden, setHidden] = useState(false);
 
   function addIncrement() {
     setCount(count + 1);
@@ -14,6 +15,10 @@ function Counter() {
 
   function reset() {
     setCount(count - count);
+  }
+
+  function onVisibilityChange() {
+    setHidden(!hidden);
   }
 
   return (
@@ -29,11 +34,16 @@ function Counter() {
         <hr />
         <h2>Toggle visibility</h2>
         <div className="visibility__toggle">
-          <p className="toggle__message">Bruh</p>
-          <button className="hidden__button">
-            <Eye className="" />
+          <p
+            className={!hidden ? `toggle__message` : `toggle__message__hidden`}
+          >
+            Bruh
+          </p>
+          <button className="hidden__button" onClick={onVisibilityChange}>
+            {hidden ? <Eye /> : <EyeOff />}
           </button>
         </div>
+        <hr />
       </div>
     </>
   );

@@ -128,3 +128,8 @@ hr {
 .toggle__message {
   margin-left: 8px;
 }
+
+.toggle__message__hidden {
+  margin-left: 8px;
+  visibility: hidden;
+}
