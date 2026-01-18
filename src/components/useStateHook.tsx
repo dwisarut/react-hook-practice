@@ -46,7 +46,6 @@ function Counter() {
           <button onClick={decrement}>Reduce number</button>
           <button onClick={reset}>Reset</button>
         </div>
-        <hr />
         <h2>Toggle visibility</h2>
         <div className="visibility__toggle">
           <p className="toggle__message">
@@ -56,7 +55,6 @@ function Counter() {
             {hidden ? <Eye /> : <EyeOff />}
           </button>
         </div>
-        <hr />
         <h2>Accordion</h2>
         <div className="accordion__html">
           <div
