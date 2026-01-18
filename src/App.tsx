@@ -1,10 +1,10 @@
-import Counter from "./components/useStateHook";
+import UseStateShowcase from "./components/useStateHook";
 
 function App() {
   return (
     <>
       <div className="container">
-        <Counter />
+        <UseStateShowcase />
       </div>
     </>
   );

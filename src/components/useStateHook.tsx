@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Eye, EyeOff, ChevronDown, ChevronUp } from "lucide-react";
 
-function Counter() {
+function UseStateShowcase() {
   const [count, setCount] = useState(0);
   const [hidden, setHidden] = useState(false);
   const [openAccordion, setOpenAccordion] = useState(false);
@@ -86,4 +86,4 @@ function Counter() {
   );
 }
 
-export default Counter;
+export default UseStateShowcase;
