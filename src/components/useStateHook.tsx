@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, ChevronDown, ChevronUp } from "lucide-react";
 
 function Counter() {
   const [count, setCount] = useState(0);
   const [hidden, setHidden] = useState(false);
+  const [openAccordion, setOpenAccordion] = useState(false);
 
   function addIncrement() {
     setCount(count + 1);
@@ -19,6 +20,10 @@ function Counter() {
 
   function onVisibilityChange() {
     setHidden(!hidden);
+  }
+
+  function onOpenAccordion() {
+    setOpenAccordion(!openAccordion);
   }
 
   return (
@@ -42,6 +47,32 @@ function Counter() {
           <button className="hidden__button" onClick={onVisibilityChange}>
             {hidden ? <Eye /> : <EyeOff />}
           </button>
+        </div>
+        <hr />
+        <h2>Accordion</h2>
+        <div className="accordion__html">
+          <div
+            className={
+              !openAccordion
+                ? `accordion__clickbox__hidden`
+                : `accordion__clickbox__show`
+            }
+            onClick={onOpenAccordion}
+          >
+            <h3>HTML</h3>
+            {!openAccordion ? <ChevronDown /> : <ChevronUp />}
+          </div>
+          <div className={!openAccordion ? "" : "accordion__content"}>
+            {openAccordion ? (
+              <p>
+                HTML (HyperText Markup Language) is the most basic building
+                block of the Web. It defines the meaning and structure of web
+                content. Other technologies besides HTML are generally used to
+                describe a web page's appearance/presentation (CSS) or
+                functionality/behavior (JavaScript).
+              </p>
+            ) : null}
+          </div>
         </div>
         <hr />
       </div>

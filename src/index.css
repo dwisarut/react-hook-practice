@@ -133,3 +133,43 @@ hr {
   margin-left: 8px;
   visibility: hidden;
 }
+
+.accordion__clickbox__show {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f9f9f9;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 0.75rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+}
+
+.accordion__clickbox__hidden {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f9f9f9;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 0.75rem;
+}
+
+.accordion__clickbox__show:hover {
+  cursor: pointer;
+}
+
+.accordion__clickbox__hidden:hover {
+  cursor: pointer;
+}
+
+.accordion__content {
+  padding: 8px;
+  border: 1px solid #f9f9f9;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
