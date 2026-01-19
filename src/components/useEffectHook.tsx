@@ -1,3 +1,5 @@
-function UseEffectShowcase() {}
+function UseEffectShowcase() {
+  return <></>;
+}
 
 export default UseEffectShowcase;
