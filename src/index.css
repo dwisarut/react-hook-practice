@@ -101,6 +101,12 @@ hr {
   width: 26rem;
 }
 
+.counter__useRef {
+  display: flex;
+  flex-direction: column;
+  width: 26rem;
+}
+
 .counter__btn__group {
   display: flex;
   flex-direction: row;
